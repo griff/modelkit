@@ -10,7 +10,7 @@
 #import <ModelKit/MKCustomObject.h>
 
 @interface MKCustomObject (MKSBCustomObject)
-@property(retain, readwrite) NSString* className;
+//@property(retain, readwrite) NSString* className;
 
 - (NSString *)description;
 - (BOOL)sbIsCustomObject;

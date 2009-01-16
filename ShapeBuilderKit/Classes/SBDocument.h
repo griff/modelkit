@@ -10,7 +10,8 @@
 
 
 @interface SBDocument : NSDocument {
-
+    NSMutableArray* rootObjects;
 }
+- (NSMutableArray *)rootObjects;
 
 @end

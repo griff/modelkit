@@ -8,7 +8,6 @@
 
 #import "SBXMLDecoder.h"
 
-
 @implementation SBXMLDecoder
 
 - (id)initForReadingWithData:(NSData*)myData;
@@ -49,6 +48,14 @@
         }
     }
     return self;
+}
+
+- (void)dealloc {
+    [idToNodes release];
+    [childMap release];
+    [idToObjects release];
+    [document release];
+    [data release];
 }
 
 - (id)delegate;
@@ -174,30 +181,29 @@
             NSXMLElement* oldCurrent = currentXMLNode;
             currentXMLNode = elem;
 //            NSLog(@"Calling initWithCoder: %@", instance);
-            newObj = [instance initWithCoder:self];
+            newObj = [[instance initWithCoder:self] autorelease];
 //            NSLog(@"Returned from initWithCoder: %@", newObj);
             currentXMLNode = oldCurrent;
         } else
-            newObj = [instance init];
-//        if(idValue)
-//            [childMap removeObjectForKey:idValue];
+            newObj = [[instance init] autorelease];
+        if(idValue)
+            [childMap removeObjectForKey:idValue];
         if(!newObj)
-        {
-            [instance release];
             return nil;
-        }
 
-        NSLog(@"Instance ratained %d", [instance retainCount]);
-        NSLog(@"New obj retained %d", [newObj retainCount]);
+//        NSLog(@"New obj retained %d", [newObj retainCount]);
+//        NSLog(@"Instance ratained %d", [instance retainCount]);
         if([class instancesRespondToSelector:@selector(awakeAfterUsingCoder:)])
             newObj = [newObj awakeAfterUsingCoder:self];
         if(idValue)
 			[idToObjects setObject:newObj forKey:idValue];	// store for later use
+        /*
 		if(newObj != instance)
         {
             [instance release];
             [newObj retain];
         }
+        */
 		if([_delegate respondsToSelector:@selector(xmldecoder:didDecodeObject:)])
 			newObj=[_delegate xmldecoder:self didDecodeObject:newObj];
 		if(newObj != instance && [_delegate respondsToSelector:@selector(xmldecoder:willReplaceObject:withObject:)])

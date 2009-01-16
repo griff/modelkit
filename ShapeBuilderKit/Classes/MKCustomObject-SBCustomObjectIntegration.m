@@ -11,4 +11,8 @@
 
 @implementation MKCustomObject (SBCustomObjectIntegration)
 
+- (NSString *)sbTypeName; {
+    return className;
+}
+
 @end

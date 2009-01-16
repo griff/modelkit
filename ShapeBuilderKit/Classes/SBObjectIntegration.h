@@ -15,6 +15,8 @@
 /* Default label and image for the object. */
 - (NSString *)sbDefaultLabel;
 - (NSImage *)sbDefaultImage;
+- (NSString *)sbTypeName;
+- (NSArray *)sbChildren;
 
 /* Customization points for integrated objects and views */
 - (void)sbAwakeInDesignableDocument:(SBDocument *)document;

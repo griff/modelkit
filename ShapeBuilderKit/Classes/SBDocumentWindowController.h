@@ -23,5 +23,11 @@
 - (IBAction)showMsbInfo:(id)sender;
 - (IBAction)selectedTabFromSegmentedControl:(id)sender;
 
-
+#pragma mark -
+#pragma mark - as a NSOutlineViewDataSource
+- (id)outlineView:(NSOutlineView *)outlineView child:(NSInteger)index ofItem:(id)item;
+- (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item;
+- (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item;
+- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item;
+- (void)outlineView:(NSOutlineView *)outlineView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn item:(id)item;
 @end

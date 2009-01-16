@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B053E600F2047F800017B30 /* NSData-MBBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B053E5E0F2047F800017B30 /* NSData-MBBase64.h */; };
+		1B053E600F2047F800017B30 /* NSData-MBBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B053E5E0F2047F800017B30 /* NSData-MBBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B053E610F2047F800017B30 /* NSData-MBBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B053E5F0F2047F800017B30 /* NSData-MBBase64.m */; };
 		1B37005E0F01A03900EA94E4 /* ModelKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1B37005C0F01A03900EA94E4 /* ModelKit_Prefix.pch */; };
 		1B3700610F01A05900EA94E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B37005F0F01A05900EA94E4 /* InfoPlist.strings */; };
-		1B3700800F01A1EA00EA94E4 /* SBDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B37007A0F01A1E900EA94E4 /* SBDocument.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1B3700800F01A1EA00EA94E4 /* SBDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B37007A0F01A1E900EA94E4 /* SBDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B3700810F01A1EA00EA94E4 /* SBDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B37007B0F01A1EA00EA94E4 /* SBDocument.m */; };
-		1B3700820F01A1EA00EA94E4 /* SBDocumentWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B37007C0F01A1EA00EA94E4 /* SBDocumentWindow.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1B3700820F01A1EA00EA94E4 /* SBDocumentWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B37007C0F01A1EA00EA94E4 /* SBDocumentWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B3700830F01A1EA00EA94E4 /* SBDocumentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B37007D0F01A1EA00EA94E4 /* SBDocumentWindow.m */; };
-		1B3700840F01A1EA00EA94E4 /* SBDocumentWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B37007E0F01A1EA00EA94E4 /* SBDocumentWindowController.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1B3700840F01A1EA00EA94E4 /* SBDocumentWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B37007E0F01A1EA00EA94E4 /* SBDocumentWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B3700850F01A1EA00EA94E4 /* SBDocumentWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B37007F0F01A1EA00EA94E4 /* SBDocumentWindowController.m */; };
 		1B37008D0F01A28900EA94E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B37008A0F01A28900EA94E4 /* main.m */; };
 		1B37008E0F01A28900EA94E4 /* SBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B37008C0F01A28900EA94E4 /* SBApplication.m */; };
@@ -29,18 +29,22 @@
 		1B3701EB0F025FEF00EA94E4 /* MKClassSwapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3701E60F025FDF00EA94E4 /* MKClassSwapper.m */; };
 		1B61A3830F042C6700C8F9C4 /* InfoTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B61A3820F042C6700C8F9C4 /* InfoTemplate.png */; };
 		1B61A3DF0F044AAD00C8F9C4 /* ModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A3DE0F044AAD00C8F9C4 /* ModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B61A3F20F044DBE00C8F9C4 /* SBObjectIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A3F00F044DBE00C8F9C4 /* SBObjectIntegration.h */; };
+		1B61A3F20F044DBE00C8F9C4 /* SBObjectIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A3F00F044DBE00C8F9C4 /* SBObjectIntegration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B61A3F30F044DBE00C8F9C4 /* SBObjectIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B61A3F10F044DBE00C8F9C4 /* SBObjectIntegration.m */; };
-		1B61A3F40F044DC500C8F9C4 /* MKCustomObject-SBCustomObjectIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A3EC0F044D6C00C8F9C4 /* MKCustomObject-SBCustomObjectIntegration.h */; };
+		1B61A3F40F044DC500C8F9C4 /* MKCustomObject-SBCustomObjectIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A3EC0F044D6C00C8F9C4 /* MKCustomObject-SBCustomObjectIntegration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B61A3F50F044DCA00C8F9C4 /* MKCustomObject-SBCustomObjectIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B61A3ED0F044D6C00C8F9C4 /* MKCustomObject-SBCustomObjectIntegration.m */; };
-		1B61A45A0F044FCB00C8F9C4 /* MKCustomObject-MKSBCustomObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A4580F044FCB00C8F9C4 /* MKCustomObject-MKSBCustomObject.h */; };
+		1B61A45A0F044FCB00C8F9C4 /* MKCustomObject-MKSBCustomObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A4580F044FCB00C8F9C4 /* MKCustomObject-MKSBCustomObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B61A45B0F044FCB00C8F9C4 /* MKCustomObject-MKSBCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B61A4590F044FCB00C8F9C4 /* MKCustomObject-MKSBCustomObject.m */; };
-		1B61A45E0F04553300C8F9C4 /* SBObjectRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A45C0F04553300C8F9C4 /* SBObjectRecord.h */; };
+		1B61A45E0F04553300C8F9C4 /* SBObjectRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A45C0F04553300C8F9C4 /* SBObjectRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B61A45F0F04553300C8F9C4 /* SBObjectRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B61A45D0F04553300C8F9C4 /* SBObjectRecord.m */; };
-		1B61A5160F046C7200C8F9C4 /* SBXMLCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A5140F046C7200C8F9C4 /* SBXMLCoder.h */; };
+		1B61A5160F046C7200C8F9C4 /* SBXMLCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B61A5140F046C7200C8F9C4 /* SBXMLCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B61A5170F046C7200C8F9C4 /* SBXMLCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B61A5150F046C7200C8F9C4 /* SBXMLCoder.m */; };
-		1BE64D8E0F0E5EE00019EFD5 /* SBXMLDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE64D8C0F0E5EE00019EFD5 /* SBXMLDecoder.h */; };
+		1BE64D8E0F0E5EE00019EFD5 /* SBXMLDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE64D8C0F0E5EE00019EFD5 /* SBXMLDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BE64D8F0F0E5EE00019EFD5 /* SBXMLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE64D8D0F0E5EE00019EFD5 /* SBXMLDecoder.m */; };
+		1BE714F80F20BF46004B3E43 /* NSView-SBObjectIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE714F70F20BF46004B3E43 /* NSView-SBObjectIntegration.m */; };
+		1BE716450F20D58F004B3E43 /* ImageAndTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE716430F20D58F004B3E43 /* ImageAndTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BE716460F20D58F004B3E43 /* ImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE716440F20D58F004B3E43 /* ImageAndTextCell.m */; };
+		1BE7170A0F20F1AB004B3E43 /* ModelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* ModelKit.framework */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1B3700310F019E9100EA94E4;
 			remoteInfo = ShapeBuilderKit;
+		};
+		1BE716C90F20F060004B3E43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* ModelKit */;
+			remoteInfo = ModelKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -119,6 +130,10 @@
 		1B61A5150F046C7200C8F9C4 /* SBXMLCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBXMLCoder.m; sourceTree = "<group>"; };
 		1BE64D8C0F0E5EE00019EFD5 /* SBXMLDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBXMLDecoder.h; sourceTree = "<group>"; };
 		1BE64D8D0F0E5EE00019EFD5 /* SBXMLDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBXMLDecoder.m; sourceTree = "<group>"; };
+		1BE714F60F20BF46004B3E43 /* NSView-SBObjectIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView-SBObjectIntegration.h"; sourceTree = "<group>"; };
+		1BE714F70F20BF46004B3E43 /* NSView-SBObjectIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView-SBObjectIntegration.m"; sourceTree = "<group>"; };
+		1BE716430F20D58F004B3E43 /* ImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageAndTextCell.h; sourceTree = "<group>"; };
+		1BE716440F20D58F004B3E43 /* ImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageAndTextCell.m; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* ModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -128,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE7170A0F20F1AB004B3E43 /* ModelKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +288,8 @@
 		1B3700290F019E2500EA94E4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1BE716430F20D58F004B3E43 /* ImageAndTextCell.h */,
+				1BE716440F20D58F004B3E43 /* ImageAndTextCell.m */,
 				1B37007A0F01A1E900EA94E4 /* SBDocument.h */,
 				1B37007B0F01A1EA00EA94E4 /* SBDocument.m */,
 				1B37007C0F01A1EA00EA94E4 /* SBDocumentWindow.h */,
@@ -292,6 +310,8 @@
 				1BE64D8D0F0E5EE00019EFD5 /* SBXMLDecoder.m */,
 				1B053E5E0F2047F800017B30 /* NSData-MBBase64.h */,
 				1B053E5F0F2047F800017B30 /* NSData-MBBase64.m */,
+				1BE714F60F20BF46004B3E43 /* NSView-SBObjectIntegration.h */,
+				1BE714F70F20BF46004B3E43 /* NSView-SBObjectIntegration.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -348,6 +368,7 @@
 				1B61A5160F046C7200C8F9C4 /* SBXMLCoder.h in Headers */,
 				1BE64D8E0F0E5EE00019EFD5 /* SBXMLDecoder.h in Headers */,
 				1B053E600F2047F800017B30 /* NSData-MBBase64.h in Headers */,
+				1BE716450F20D58F004B3E43 /* ImageAndTextCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +417,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1BE716CA0F20F060004B3E43 /* PBXTargetDependency */,
 				1B3700460F019EC000EA94E4 /* PBXTargetDependency */,
 			);
 			name = "Shape Builder";
@@ -487,6 +509,7 @@
 				1B61A5170F046C7200C8F9C4 /* SBXMLCoder.m in Sources */,
 				1BE64D8F0F0E5EE00019EFD5 /* SBXMLDecoder.m in Sources */,
 				1B053E610F2047F800017B30 /* NSData-MBBase64.m in Sources */,
+				1BE716460F20D58F004B3E43 /* ImageAndTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +519,7 @@
 			files = (
 				1B37008D0F01A28900EA94E4 /* main.m in Sources */,
 				1B37008E0F01A28900EA94E4 /* SBApplication.m in Sources */,
+				1BE714F80F20BF46004B3E43 /* NSView-SBObjectIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +544,11 @@
 			isa = PBXTargetDependency;
 			target = 1B3700310F019E9100EA94E4 /* ShapeBuilderKit */;
 			targetProxy = 1B3700450F019EC000EA94E4 /* PBXContainerItemProxy */;
+		};
+		1BE716CA0F20F060004B3E43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* ModelKit */;
+			targetProxy = 1BE716C90F20F060004B3E43 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

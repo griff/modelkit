@@ -12,6 +12,10 @@
 
 @implementation SBDocument
 
+- (NSMutableArray *)rootObjects; {
+    return rootObjects;
+}
+
 - (void)makeWindowControllers {
     SBDocumentWindowController* controller = [[SBDocumentWindowController alloc] init];
     [self addWindowController:controller];
@@ -32,7 +36,9 @@
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
 {
     SBXMLDecoder* decoder = [[SBXMLDecoder alloc] initForReadingWithData:data error:outError];
-    id ret = [decoder decodeObjectForKey:@"IBDocument.RootObjects"];
+    rootObjects = [[decoder decodeObjectForKey:@"SBDocument.RootObjects"] retain];
+    [decoder finishDecoding];
+    [decoder release];
     // Insert code here to read your document from the given data of the specified type.  If the given outError != NULL, ensure that you set *outError when returning NO.
 
     // You can also choose to override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead. 
