@@ -280,9 +280,11 @@
 - (const uint8_t *)decodeBytesForKey:(NSString *)key returnedLength:(NSUInteger *)lengthp;
 {
     NSXMLElement* elem = [self elementForKey:key];
-//    if(elem && [[elem name] isEqual:@"bytes"])
-//        return [[elem stringValue] doubleValue];
-    return NULL;
+    NSData* retData = [NSData dataWithBase64EncodedString:[elem stringValue]];
+    if(!retData)
+        return NULL;
+    *lengthp = [retData length];
+    return [retData bytes];
 }
 
 @end

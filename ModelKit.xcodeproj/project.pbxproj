@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B053E600F2047F800017B30 /* NSData-MBBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B053E5E0F2047F800017B30 /* NSData-MBBase64.h */; };
+		1B053E610F2047F800017B30 /* NSData-MBBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B053E5F0F2047F800017B30 /* NSData-MBBase64.m */; };
 		1B37005E0F01A03900EA94E4 /* ModelKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1B37005C0F01A03900EA94E4 /* ModelKit_Prefix.pch */; };
 		1B3700610F01A05900EA94E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B37005F0F01A05900EA94E4 /* InfoPlist.strings */; };
 		1B3700800F01A1EA00EA94E4 /* SBDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B37007A0F01A1E900EA94E4 /* SBDocument.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -75,6 +77,8 @@
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1B053E5E0F2047F800017B30 /* NSData-MBBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData-MBBase64.h"; sourceTree = "<group>"; };
+		1B053E5F0F2047F800017B30 /* NSData-MBBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData-MBBase64.m"; sourceTree = "<group>"; };
 		1B3700320F019E9100EA94E4 /* ShapeBuilderKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShapeBuilderKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B37003F0F019EB900EA94E4 /* Shape Builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shape Builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B37005B0F01A03900EA94E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				1B61A5150F046C7200C8F9C4 /* SBXMLCoder.m */,
 				1BE64D8C0F0E5EE00019EFD5 /* SBXMLDecoder.h */,
 				1BE64D8D0F0E5EE00019EFD5 /* SBXMLDecoder.m */,
+				1B053E5E0F2047F800017B30 /* NSData-MBBase64.h */,
+				1B053E5F0F2047F800017B30 /* NSData-MBBase64.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				1B61A45E0F04553300C8F9C4 /* SBObjectRecord.h in Headers */,
 				1B61A5160F046C7200C8F9C4 /* SBXMLCoder.h in Headers */,
 				1BE64D8E0F0E5EE00019EFD5 /* SBXMLDecoder.h in Headers */,
+				1B053E600F2047F800017B30 /* NSData-MBBase64.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +486,7 @@
 				1B61A45F0F04553300C8F9C4 /* SBObjectRecord.m in Sources */,
 				1B61A5170F046C7200C8F9C4 /* SBXMLCoder.m in Sources */,
 				1BE64D8F0F0E5EE00019EFD5 /* SBXMLDecoder.m in Sources */,
+				1B053E610F2047F800017B30 /* NSData-MBBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
