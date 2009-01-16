@@ -12,6 +12,7 @@
 @interface SBXMLDecoder : NSCoder {
     NSMutableDictionary* idToObjects;
     NSMutableDictionary* idToNodes;
+    NSMapTable* childMap;
     NSXMLElement* currentXMLNode;
     NSXMLDocument* document;
     NSData *data;
@@ -37,5 +38,7 @@
 - (float)decodeFloatForKey:(NSString *)myKey;
 - (double)decodeDoubleForKey:(NSString *)myKey;
 - (const uint8_t *)decodeBytesForKey:(NSString *)key returnedLength:(NSUInteger *)lengthp;
+
+- (Class)classForClassName:(NSString *)codedName;
 
 @end

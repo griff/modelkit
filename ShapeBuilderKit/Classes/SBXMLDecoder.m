@@ -28,14 +28,16 @@
             [self release];
             return nil;
         }
-        idToObjects = [NSMutableDictionary dictionaryWithCapacity:100];
-        
+        idToObjects = [[NSMutableDictionary alloc] initWithCapacity:100];
+        childMap = [[NSMapTable mapTableWithStrongToWeakObjects] retain]; 
+//        CFDictionaryRef
+//        NSMapTable
         currentXMLNode = [document rootElement];
 //        if([currentXMLNode name])
         currentXMLNode = (NSXMLElement*)[currentXMLNode childAtIndex:0];
         
         NSArray* objects = [currentXMLNode nodesForXPath:@"//object[@id!='']" error:myError];
-        idToNodes = [NSMutableDictionary dictionaryWithCapacity:[objects count]];
+        idToNodes = [[NSMutableDictionary alloc] initWithCapacity:[objects count]];
         for( NSXMLElement* node in objects )
         {
             NSXMLNode* idNode = [node attributeForName:@"id"];
@@ -62,6 +64,11 @@
 - (BOOL)allowsKeyedCoding { return YES; }
 
 - (void)finishDecoding; {}
+
+- (Class)classForClassName:(NSString *)codedName;
+{
+    return nil;
+}
 
 - (NSXMLElement *)elementForKey:(NSString*)myKey;
 {
@@ -116,7 +123,19 @@
     if([name isEqual:@"reference"])
     {
         NSString* ref = [[elem attributeForName:@"ref"] stringValue];
-        return [idToObjects objectForKey:ref];
+        id obj = [idToObjects objectForKey:ref];
+        if(!obj)
+        {
+            obj = [childMap objectForKey:ref];
+            if(!obj)
+            {
+                NSXMLElement* node = [idToNodes objectForKey:ref];
+                if(!node)
+                    [NSException raise:NSInvalidUnarchiveOperationException format:@"Can't find object for reference %@", ref];
+                obj = [self decodeForXMLElement:node];
+            }
+        }
+        return obj;
     } else if([name isEqual:@"nil"])
     {
         return nil;
@@ -143,7 +162,7 @@
         if(refNode)
         {
             idValue = [refNode stringValue];
-            [idToObjects setObject:newObj forKey:idValue];
+            [childMap setObject:newObj forKey:idValue];
         }
 
         if([instance isKindOfClass:[NSMutableArray class]])
@@ -154,23 +173,40 @@
         {
             NSXMLElement* oldCurrent = currentXMLNode;
             currentXMLNode = elem;
+//            NSLog(@"Calling initWithCoder: %@", instance);
             newObj = [instance initWithCoder:self];
+//            NSLog(@"Returned from initWithCoder: %@", newObj);
             currentXMLNode = oldCurrent;
         } else
             newObj = [instance init];
+//        if(idValue)
+//            [childMap removeObjectForKey:idValue];
         if(!newObj)
+        {
+            [instance release];
             return nil;
+        }
 
+        NSLog(@"Instance ratained %d", [instance retainCount]);
+        NSLog(@"New obj retained %d", [newObj retainCount]);
         if([class instancesRespondToSelector:@selector(awakeAfterUsingCoder:)])
             newObj = [newObj awakeAfterUsingCoder:self];
-		if(newObj != instance && idValue)
-			[idToObjects setObject:newObj forKey:idValue];	// store again, since it has been substituted
+        if(idValue)
+			[idToObjects setObject:newObj forKey:idValue];	// store for later use
+		if(newObj != instance)
+        {
+            [instance release];
+            [newObj retain];
+        }
 		if([_delegate respondsToSelector:@selector(xmldecoder:didDecodeObject:)])
 			newObj=[_delegate xmldecoder:self didDecodeObject:newObj];
 		if(newObj != instance && [_delegate respondsToSelector:@selector(xmldecoder:willReplaceObject:withObject:)])
 			[_delegate xmldecoder:self willReplaceObject:instance withObject:newObj];	// has been changed between original call to initWithCoder
         
         return newObj;
+    } else if( [name isEqual:@"string"])
+    {
+        return [elem stringValue];
     } else if( [name isEqual:@"integer"])
     {
         NSXMLNode* valueNode = [elem attributeForName:@"value"];
@@ -243,6 +279,10 @@
 
 - (const uint8_t *)decodeBytesForKey:(NSString *)key returnedLength:(NSUInteger *)lengthp;
 {
+    NSXMLElement* elem = [self elementForKey:key];
+//    if(elem && [[elem name] isEqual:@"bytes"])
+//        return [[elem stringValue] doubleValue];
+    return NULL;
 }
 
 @end
